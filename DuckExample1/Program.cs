@@ -10,6 +10,18 @@ namespace DuckExample1
     {
         static void Main(string[] args)
         {
+            Duck mallard = new MallardDuck();
+            mallard.performQuack();
+            mallard.performFly();
+
+            Duck modelDuck = new ModelDuck();
+            modelDuck.performQuack();
+            modelDuck.performFly();
+            modelDuck.setFlyBehavior(new FlyRocketPowered());
+            modelDuck.performFly();
+
+
+            Console.ReadLine();   
         }
     }
 }
